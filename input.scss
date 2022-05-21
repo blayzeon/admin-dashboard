@@ -112,7 +112,7 @@ span.large {
     li {
         @include flex-gap(); 
         @include flex-align();
-        margin-bottom: 0.2rem;
+        margin-bottom: 1rem;
     }   
 
     li:hover {

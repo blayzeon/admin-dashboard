@@ -57,7 +57,7 @@ span.large {
   gap: 1rem;
   display: flex;
   align-items: center;
-  margin-bottom: 0.2rem;
+  margin-bottom: 1rem;
 }
 .sidebar li:hover {
   cursor: pointer;
