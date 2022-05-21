@@ -1,4 +1,8 @@
-@mixin theme($color: rgb(62, 175, 255)) {
+$dark-blue: rgb(24, 31, 49);
+$dark-gray: rgb(16, 16, 16);
+$mid-blue: rgba(48, 61, 95);
+
+@mixin theme($color: $dark-gray) {
     background-color: $color;
     color: white;
 }
@@ -28,9 +32,11 @@
 @mixin card() {
     @include borderbox();
     @include dropshadow();
+    cursor: pointer;
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: black;
+    outline: 1px solid $dark-blue;
     padding: 1rem;
     border-radius: 0.3rem;
 }
@@ -41,16 +47,17 @@
     -webkit-box-sizing: border-box !important;
 }
 
-@mixin dropshadow($color: hsla(0, 0%, 0%, 0.1)){
+@mixin dropshadow($color: hsla(0, 0%, 0%, 0.8)){
     filter: drop-shadow(0 0.2rem 0.1rem $color);
 }
 
 @mixin hover-effect() {
-    opacity: 0.8;
     cursor: pointer;
+    color: steelblue;
 }
 
 html, body, .container {
+    background-color: black;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -60,7 +67,7 @@ img:hover, .material-icons:hover {
     @include hover-effect();
 }
 
-h2:hover, h3:hover, strong:hover {
+h2:hover, strong:hover {
     text-decoration: underline;
     cursor: pointer;
 }
@@ -76,7 +83,8 @@ span.large {
 }
   
 .container {
-    background-color: #e3e3e3;
+    background-color: $mid-blue;
+    color: white;
     display: grid;
     grid-template-columns: 15rem 1fr;
     grid-template-rows: 10rem 1fr;
@@ -110,7 +118,8 @@ span.large {
   
 .top {
     @include dropshadow();
-    background-color: #fff;
+    background-color: $dark-blue;
+    color: white;
     display: grid;
     align-items: center;
     grid-template-rows: 40% 60%;
@@ -130,7 +139,8 @@ span.large {
     }
 
     button:hover {
-        @include hover-effect;
+        cursor: pointer;
+        background-color: steelblue;
     }
 }
 
@@ -179,7 +189,7 @@ span.large {
 
 #projects > * {
     @include card();
-    border-left: 0.5rem solid orange;
+    border-left: 0.5rem solid steelblue;
 }
 
 .card-icons {

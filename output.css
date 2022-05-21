@@ -1,15 +1,16 @@
 html, body, .container {
+  background-color: black;
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
 img:hover, .material-icons:hover {
-  opacity: 0.8;
   cursor: pointer;
+  color: steelblue;
 }
 
-h2:hover, h3:hover, strong:hover {
+h2:hover, strong:hover {
   text-decoration: underline;
   cursor: pointer;
 }
@@ -25,7 +26,8 @@ span.large {
 }
 
 .container {
-  background-color: #e3e3e3;
+  background-color: rgb(48, 61, 95);
+  color: white;
   display: grid;
   grid-template-columns: 15rem 1fr;
   grid-template-rows: 10rem 1fr;
@@ -36,7 +38,7 @@ span.large {
 }
 
 .sidebar {
-  background-color: rgb(62, 175, 255);
+  background-color: rgb(16, 16, 16);
   color: white;
   grid-row: 1/3;
   font-weight: bold;
@@ -54,13 +56,14 @@ span.large {
   margin-bottom: 0.2rem;
 }
 .sidebar li:hover {
-  opacity: 0.8;
   cursor: pointer;
+  color: steelblue;
 }
 
 .top {
-  filter: drop-shadow(0 0.2rem 0.1rem hsla(0deg, 0%, 0%, 0.1));
-  background-color: #fff;
+  filter: drop-shadow(0 0.2rem 0.1rem hsla(0deg, 0%, 0%, 0.8));
+  background-color: rgb(24, 31, 49);
+  color: white;
   display: grid;
   align-items: center;
   grid-template-rows: 40% 60%;
@@ -79,14 +82,14 @@ span.large {
   border: none;
   border-radius: 1rem;
   padding: 0.2rem 1.7rem;
-  background-color: rgb(62, 175, 255);
+  background-color: rgb(16, 16, 16);
   color: white;
   height: 2rem;
   box-sizing: border-box;
 }
 .top button:hover {
-  opacity: 0.8;
   cursor: pointer;
+  background-color: steelblue;
 }
 
 .top > * {
@@ -134,13 +137,15 @@ span.large {
   box-sizing: border-box !important;
   -moz-box-sizing: border-boz !important;
   -webkit-box-sizing: border-box !important;
-  filter: drop-shadow(0 0.2rem 0.1rem hsla(0deg, 0%, 0%, 0.1));
+  filter: drop-shadow(0 0.2rem 0.1rem hsla(0deg, 0%, 0%, 0.8));
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: black;
+  outline: 1px solid rgb(24, 31, 49);
   padding: 1rem;
   border-radius: 0.3rem;
-  border-left: 0.5rem solid orange;
+  border-left: 0.5rem solid steelblue;
 }
 
 .card-icons {
@@ -160,10 +165,12 @@ span.large {
   box-sizing: border-box !important;
   -moz-box-sizing: border-boz !important;
   -webkit-box-sizing: border-box !important;
-  filter: drop-shadow(0 0.2rem 0.1rem hsla(0deg, 0%, 0%, 0.1));
+  filter: drop-shadow(0 0.2rem 0.1rem hsla(0deg, 0%, 0%, 0.8));
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: black;
+  outline: 1px solid rgb(24, 31, 49);
   padding: 1rem;
   border-radius: 0.3rem;
 }
