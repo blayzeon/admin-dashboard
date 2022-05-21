@@ -26,9 +26,18 @@
 }
 
 @mixin card() {
+    @include borderbox();
+    display: flex;
+    flex-direction: column;
     background-color: white;
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 0.3rem;
+}
+
+@mixin borderbox() {
+    box-sizing: border-box !important; 
+    -moz-box-sizing: border-boz !important; 
+    -webkit-box-sizing: border-box !important;
 }
 
 html, body, .container {
@@ -100,24 +109,53 @@ html, body, .container {
 .main {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
     gap: 1rem;
 
-    h3, p {
+    h3 {
+        margin: 0 0 0.5rem 0;
+        padding: 0;
+    }
+
+    .card > h3, p {
         margin: 0;
         padding: 0;
     }
 }
 
+.main > div:first-child, #projects {
+    @include borderbox();
+    height: 100%;
+}
+
 #projects {
+    background-color: pink;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(auto-fit, minmax(40%, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 1rem;
 }
 
 #projects > * {
     @include card();
     border-left: 0.5rem solid orange;
+}
+
+.card-icons {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 1rem;
+}
+
+.card-icons:hover {
+    cursor: pointer;
+}
+
+#side-content > div{ 
+    margin-bottom: 1rem;
 }
 
 #announcements, #trending {
