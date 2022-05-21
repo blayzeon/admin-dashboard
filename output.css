@@ -207,6 +207,11 @@ span.large {
   border-radius: 2.5rem;
 }
 
+.profile-image, button {
+  border: 0.1rem solid black;
+  filter: drop-shadow(0 0 0.1rem rgba(70, 131, 180, 0.5));
+}
+
 .flex-stack {
   display: flex;
   flex-direction: column;
