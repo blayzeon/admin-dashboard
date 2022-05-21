@@ -5,7 +5,7 @@ html, body, .container {
 }
 
 .container {
-  background-color: #d2d2d2;
+  background-color: #e3e3e3;
   display: grid;
   grid-template-columns: 20% 80%;
   grid-template-rows: 20% 80%;
@@ -33,15 +33,33 @@ html, body, .container {
   margin-bottom: 0.2rem;
   cursor: pointer;
 }
-.sidebar .logo {
-  cursor: pointer;
-  width: 5rem;
-}
 
 .top {
   background-color: #fff;
   display: grid;
   grid-template-rows: 40% 60%;
+  gap: 1rem;
+}
+.top input {
+  background-color: #e3e3e3;
+  flex: 1;
+  height: 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.2rem 1.7rem;
+}
+.top button {
+  box-sizing: border-box;
+  background-color: rgb(62, 175, 255);
+  color: white;
+  cursor: pointer;
+  height: 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.2rem 1.7rem;
+}
+.top button:hover {
+  background-color: hsla(205deg, 100%, 62%, 0.5);
 }
 
 .top > * {
@@ -55,6 +73,11 @@ html, body, .container {
   grid-template-rows: 80% 20%;
 }
 
+.profile-image {
+  height: 3rem;
+  border-radius: 3rem;
+}
+
 .flex-align-gap {
   display: flex;
   gap: 0.5rem;
@@ -65,6 +88,14 @@ html, body, .container {
 .flex-gap {
   display: flex;
   gap: 0.5rem;
+}
+
+.medium-gap {
+  gap: 1.5rem;
+}
+
+.large-gap {
+  gap: 5rem;
 }
 
 /*# sourceMappingURL=output.css.map */

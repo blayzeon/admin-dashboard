@@ -8,6 +8,18 @@
     align-items: $alignment;
 }
 
+@mixin flex-justifity($alignment: center) {
+    display: flex;
+    justify-content: $alignment;
+}
+
+@mixin rounded() {
+    height: 1.5rem;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.2rem 1.7rem;
+}
+
 html, body, .container {
     margin: 0;
     padding: 0;
@@ -15,7 +27,7 @@ html, body, .container {
 }
   
 .container {
-    background-color: #d2d2d2;
+    background-color: #e3e3e3;
     display: grid;
     grid-template-columns: 20% 80%;
     grid-template-rows: 20% 80%;
@@ -48,6 +60,25 @@ html, body, .container {
     background-color: #fff;
     display: grid;
     grid-template-rows: 40% 60%;
+    gap: 1rem;
+
+    input {
+        background-color: #e3e3e3;
+        flex: 1;
+        @include rounded();
+    }
+
+    button {
+        box-sizing: border-box;
+        background-color: rgb(62, 175, 255);
+        color: white;
+        cursor: pointer;
+        @include rounded();
+    }
+
+    button:hover {
+        background-color: hsla(205, 100%, 62%, 0.5);
+    }
 }
 
 .top > * {
@@ -61,6 +92,11 @@ html, body, .container {
     grid-template-rows: 80% 20%;
 }
 
+.profile-image {
+    height: 3rem;
+    border-radius: 3rem;
+}
+
 .flex-align-gap {
    @include flex-gap(); 
    @include flex-align();
@@ -68,4 +104,12 @@ html, body, .container {
 
 .flex-gap {
     @include flex-gap();
+}
+
+.medium-gap {
+    gap: 1.5rem;
+}
+
+.large-gap {
+    gap: 5rem;
 }
