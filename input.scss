@@ -27,6 +27,7 @@
 
 @mixin card() {
     @include borderbox();
+    @include dropshadow();
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -38,6 +39,10 @@
     box-sizing: border-box !important; 
     -moz-box-sizing: border-boz !important; 
     -webkit-box-sizing: border-box !important;
+}
+
+@mixin dropshadow($color: hsla(0, 0%, 0%, 0.1)){
+    filter: drop-shadow(0 0.2rem 0.1rem $color);
 }
 
 html, body, .container {
@@ -86,6 +91,7 @@ span.large {
 }
   
 .top {
+    @include dropshadow();
     background-color: #fff;
     display: grid;
     align-items: center;
@@ -150,7 +156,7 @@ span.large {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
     padding-bottom: 1rem;
 }
 
